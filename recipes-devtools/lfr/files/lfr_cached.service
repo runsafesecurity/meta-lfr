@@ -1,0 +1,10 @@
+[Unit]
+Description=RunSafe LFR Cache Daemon
+DefaultDependencies=no
+
+[Service]
+Type=exec
+ExecStart=@SBINDIR@/lfr_cached
+
+[Install]
+WantedBy=sysinit.target

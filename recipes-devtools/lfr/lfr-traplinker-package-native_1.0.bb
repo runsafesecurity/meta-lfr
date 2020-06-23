@@ -16,6 +16,7 @@ do_install() {
     install -m 0755 ${S}/bin/parse_textrap.py ${D}${bindir}/lfr/parse_textrap.py
     install -m 0755 ${S}/bin/LicenseChecker ${D}${bindir}/lfr/LicenseChecker
     install -m 0644 ${S}/license/key.pub ${D}${bindir}/lfr/license/key.pub
+    LFR_ROOT_PATH=${D}${bindir}/lfr ${D}${bindir}/lfr/LicenseChecker ${ALKEMIST_LICENSE_KEY}
 }
 
 COMPATIBLE_HOST = "(i.86|x86_64|arm|aarch64).*-linux"

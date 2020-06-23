@@ -63,7 +63,7 @@ export LFR_TRAPLINKER_DISABLE = "${LFR_DISABLE}"
 # GCC_EXEC_PREFIX incorrectly
 export LFR_ORIGINIAL_AR = "${@d.getVar('AR').replace('gcc-ar', 'ar')}"
 
-export LFR_PYTHONPATH = "${STAGING_DIR_NATIVE}/usr/lib/python3.7/site-packages"
+export LFR_PYTHONPATH = "${STAGING_DIR_NATIVE}/usr/lib/python3.5/site-packages"
 
 # Disable LFR for certain packages
 # - glibc&gcc libraries

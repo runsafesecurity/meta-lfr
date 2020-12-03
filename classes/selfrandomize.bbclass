@@ -63,7 +63,7 @@ export LFR_TRAPLINKER_DISABLE = "${LFR_DISABLE}"
 # GCC_EXEC_PREFIX incorrectly
 export LFR_ORIGINIAL_AR = "${@d.getVar('AR').replace('gcc-ar', 'ar')}"
 
-export LFR_PYTHONPATH = "${STAGING_DIR_NATIVE}/usr/lib/python3.7/site-packages"
+export LFR_PYTHONPATH = "${STAGING_DIR_NATIVE}/usr/lib/python3.8/site-packages"
 
 # Disable LFR for certain packages
 # - glibc&gcc libraries
@@ -81,6 +81,7 @@ LFR_DISABLE_pn-linux-aspeed = "1"
 LFR_DISABLE_pn-gdb = "1"
 LFR_DISABLE_pn-strace = "1"
 # - Other recipes
+LFR_DISABLE_pn-gcc = "1"
 LFR_DISABLE_pn-quota = "1"
 LFR_DISABLE_pn-sysklogd = "1"
 LFR_DISABLE_pn-u-boot-aspeed = "1"

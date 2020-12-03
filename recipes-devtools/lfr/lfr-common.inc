@@ -13,6 +13,8 @@ def map_lfr_arch(bb, d, arch_var):
     a = d.getVar(arch_var)
     if a.startswith("aarch64"):
         return "arm64"
+    elif a[0] == "i" and a[2:] == "86":
+        return "x86"
     else:
         return a
 
